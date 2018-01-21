@@ -21,17 +21,15 @@ namespace UWPPackagesGetter
     {
         private static PackageManager PkgManager = new PackageManager();
 
-        /// <summary>
-        /// Event occurs when packages have been retrieved with ther app icons.
-        /// </summary>
+      
 
 
         #region Functions
 
         /// <summary>
-        /// Gets app package and image and returns them as a new "PackageItem" asynchronously, which will then be used for the to display app icons and data useful for app launchers .
+        /// Gets a collection of all installed packages which can be used to display app icons and data useful for app launchers.
         /// </summary>
-        public static IAsyncOperation<IEnumerable<PackageItem>> GetAllAppsAsync()
+        public static IAsyncOperation<IEnumerable<PackageItem>> GetAllPackagesAsync()
         {
 
             return AsyncInfo.Run<IEnumerable<PackageItem>>((token) =>
@@ -108,6 +106,9 @@ namespace UWPPackagesGetter
         #endregion
 
         #region Events
+        /// <summary>
+        /// Event occurs when Packages have been retrieved
+        /// </summary>
         public static event EventHandler<PackageEventArgs> PackagesRetrieved;
         #endregion
     }

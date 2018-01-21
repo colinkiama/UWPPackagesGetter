@@ -34,7 +34,7 @@ namespace Test
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            var MyPackageGetter = await PackageGetter.GetAllAppsAsync();
+            var MyPackageGetter = await PackageGetter.GetAllPackagesAsync();
             foreach (var item in MyPackageGetter)
             {
                 Debug.WriteLine(item.PackageEntry.DisplayInfo.DisplayName);

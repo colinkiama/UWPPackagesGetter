@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>UWPPackgesGetter.ColinKiama</id>
+    <version>1.0.0</version>
+    <title>UWP Packages Getter</title>
+    <summary>Gets installed app packages on a user's Windows 10 Device</summary>
+    <authors>Colin Kiama</authors>
+    <owners>Colin Kiama</owners>
+    <licenseUrl>https://raw.githubusercontent.com/colinkiama//master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/colinkiama/UWPPackagesGetter</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Gets installed app packages on a user's Windows 10 Device.
+    WARNING: Requires the restricted capabilities "packageManagement" and "packageQuery"
+    to be declared in your Package.appxmanifest file.</description>
+    <releaseNotes>First Release</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>uwp app apps getter package packages colin kiama colinkiama windows10 windows 10 installed downloaded </tags>
+  </metadata>
+<files>
+    <!-- WinMd and IntelliSense -->
+  <file src=".\bin\Release\UWPPackagesGetter.winmd" target="lib\uap10.0"/>
+  <file src=".\bin\Release\UWPPackagesGetter.xml" target="lib\uap10.0"/>
+
+<!-- XAML controls -->
+
+<!-- DLLs and resources -->
+
+
+<file src=".\bin\x86\Release\UWPPackagesGetter.pri" target="runtimes\win10-x86\native"/>
+<file src=".\bin\x64\Release\UWPPackagesGetter.pri" target="runtimes\win10-x64\native"/>
+<file src=".\bin\ARM\Release\UWPPackagesGetter.pri" target="runtimes\win10-arm\native"/>
+
+
+
+
+<!-- .targets -->
+<file src="UWPPackagesGetter.targets" target="build\native"/>
+
+
+  </files>
+
+</package>
