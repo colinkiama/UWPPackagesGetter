@@ -1,4 +1,4 @@
-\\# UWPPackagesGetter
+# UWPPackagesGetter
 Windows Runtime Component that gets all installed apps from your users Windows 10 Device. (Win32 Programs are not included). 
 
 Note: This used restricted capabilites so only Business accounts can upload apps using this Runtime Component to the Store. However, anyone can still use this if they are sideloading the app.
@@ -25,4 +25,11 @@ Note: This used restricted capabilites so only Business accounts can upload apps
     <rescap:Capability Name="pacakgeQuery"/>
   </Capabilities>
 ```
+Now the classes used will all work without permission exceptions :)
 
+## Installation:
+
+Open the Nuget Package Manager console and enter this command:
+`Install-Package UWPPackgesGetter.ColinKiama`
+
+or... In a a Universal Windows Project, go to Tools > NuGet Package Manager > Manage NuGet Packages for Solution then on the "Browse" section, search for "UWPPackgesGetter.ColinKiama" then, you can install the package for each project you want to use in your current solution.
