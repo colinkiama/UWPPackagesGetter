@@ -40,5 +40,5 @@ or... In a a Universal Windows Project, go to Tools > NuGet Package Manager > Ma
 ```
  // Quick Example
  ObservableCollection<PackageItem> MyPackages = new ObservableCollection<PackageItem>();
- MyPackages = PackageGetter.GetAllAppsAsync();
+ MyPackages = PackageGetter.GetAllPackagesAsync();
 ```
