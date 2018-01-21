@@ -33,3 +33,12 @@ Open the Nuget Package Manager console and enter this command:
 `Install-Package UWPPackgesGetter.ColinKiama`
 
 or... In a a Universal Windows Project, go to Tools > NuGet Package Manager > Manage NuGet Packages for Solution then on the "Browse" section, search for "UWPPackgesGetter.ColinKiama" then, you can install the package for each project you want to use in your current solution.
+
+
+## How to use:
+
+```
+ // Quick Example
+ ObservableCollection<PackageItem> MyPackages = new ObservableCollection<PackageItem>();
+ MyPackages = PackageGetter.GetAllAppsAsync();
+```
