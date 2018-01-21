@@ -27,19 +27,17 @@ namespace UWPPackagesGetter
 
 
         #region Functions
+
         /// <summary>
-        /// Gets app package and image and returns them as a new "PackageItem" asynchronously, which will then be used for the app control template.
-        /// <para> Of the two getAllApps() methods, this is the preferred version because it doesn't block the stop the rest of the app from running when 
-        /// this is being run.</para>
+        /// Gets app package and image and returns them as a new "PackageItem" asynchronously, which will then be used for the to display app icons and data useful for app launchers .
         /// </summary>
-        /// <returns></returns>
         public static IAsyncOperation<IEnumerable<PackageItem>> GetAllAppsAsync()
         {
 
+            return AsyncInfo.Run<IEnumerable<PackageItem>>((token) =>
 
-            return AsyncInfo.Run<IEnumerable<PackageItem>>((token) =>  
-
-            Task.Run<IEnumerable<PackageItem>>(async () => {
+            Task.Run<IEnumerable<PackageItem>>(async () =>
+            {
                 var ListOfInstalledPackages = PkgManager.FindPackagesForUserWithPackageTypes("", PackageTypes.Main);
                 List<Package> AllPackages = new List<Package>();
                 List<Package> Packages = new List<Package>();
@@ -59,9 +57,6 @@ namespace UWPPackagesGetter
                     try
                     {
                         List<AppListEntry> SingleAppListEntries = new List<AppListEntry>();
-                        Task<IReadOnlyList<AppListEntry>> GetAppEntriesTask = Packages[i].GetAppListEntriesAsync().AsTask();
-                        GetAppEntriesTask.Wait();
-
                         var AppListEntries = await Packages[i].GetAppListEntriesAsync();
                         SingleAppListEntries = AppListEntries.ToList();
                         if (SingleAppListEntries.Count > 0)
@@ -104,12 +99,11 @@ namespace UWPPackagesGetter
 
                 }
 
-
                 PackagesRetrieved?.Invoke(null, new PackageEventArgs(true));
                 return PackageItems;
             }, token)
             );
-            
+
         }
         #endregion
 
