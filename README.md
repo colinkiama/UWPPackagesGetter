@@ -1,7 +1,7 @@
 # UWPPackagesGetter
 Windows Runtime Component that gets all installed apps from your users Windows 10 Device. (Win32 Programs are not included). 
 
-Note: This used restricted capabilites so only Business accounts can upload apps using this Runtime Component to the Store. However, anyone can still use this if they are sideloading the app.
+Note: This uses restricted capabilites so only Business accounts can upload apps using this Runtime Component to the Store. However, anyone can still use this if they are sideloading the app.
 
 ## Before you start, do this first:
 
