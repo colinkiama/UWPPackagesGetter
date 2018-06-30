@@ -6,7 +6,7 @@ Note: This uses restricted capabilites so only Business accounts can upload apps
 ## Before you start, do this first:
 
 1. Add the rescap namespace to your Package.appxmanifest file. So it looks something like this:
-```
+``` xml
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
@@ -18,7 +18,7 @@ Note: This uses restricted capabilites so only Business accounts can upload apps
 ```
 
 2. Then in the capabilities tags, add the "packageQuery" and "packageManagement" restricted capabilites:
-```
+``` xml
  <Capabilities>
     <Capability Name="internetClient" />
     <rescap:Capability Name="packageManagement"/>
@@ -37,7 +37,7 @@ or... In a a Universal Windows Project, go to Tools > NuGet Package Manager > Ma
 
 ## How to use:
 
-```
+``` C#
  // Quick Example
  ObservableCollection<PackageItem> MyPackages = new ObservableCollection<PackageItem>();
  MyPackages = PackageGetter.GetAllPackagesAsync();
