@@ -5,7 +5,7 @@ Note: This uses restricted capabilites so only Business accounts can upload apps
 
 ## Before you start, do this first:
 
-1. Add the rescap namespace to your Package.appxmanifest file. So it looks something like this:
+1. Add the `rescap` namespace to the `IgnorableNamespaces` section of your Package.appxmanifest file. So it looks something like this:
 ``` xml
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
